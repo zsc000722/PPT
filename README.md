@@ -25,7 +25,7 @@ pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointn
 
 ## 2. Datasets
 
-We use ShapeNet, ScanObjectNN, ModelNet40 and ShapeNetPart in this work. See [DATASET.md](./DATASET.md) for details.
+We use ScanObjectNN, ModelNet40 and ShapeNetPart in this work. See [DATASET.md](./DATASET.md) for details.
 
 <!-- ## 3. PPT Models
 | Task              | Dataset        | Config                                                                         | Acc.       | Download                                                                                 |      

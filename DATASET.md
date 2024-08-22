@@ -58,20 +58,6 @@ Download: Please download the data from [Point-BERT repo](https://github.com/lul
 ```
 Download: Please download the data from the [official website](https://hkust-vgd.github.io/scanobjectnn/).
 
-### ShapeNet55/34 Dataset:
-
-```
-│ShapeNet55-34/
-├──shapenet_pc/
-│  ├── 02691156-1a04e3eab45ca15dd86060f189eb133.npy
-│  ├── 02691156-1a6ad7a24bb89733f412783097373bdc.npy
-│  ├── .......
-├──ShapeNet-55/
-│  ├── train.txt
-│  └── test.txt
-```
-
-Download: Please download the data from [Point-BERT repo](https://github.com/lulutang0608/Point-BERT/blob/49e2c7407d351ce8fe65764bbddd5d9c0e0a4c52/DATASET.md).
 
 ### ShapeNetPart Dataset:
 
