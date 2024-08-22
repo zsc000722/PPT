@@ -1,7 +1,0 @@
-2024-05-22 13:06:25,458 - Model - INFO - PARAMETER ...
-2024-05-22 13:06:25,458 - Model - INFO - Namespace(batch_size=64, ckpts='../recon.pth', deterministic=False, epoch=300, gpu='7', learning_rate=0.0002, log_dir='debug0', model='pt', normal=False, npoint=2048, root='../data/shapenetcore_partanno_segmentation_benchmark_v0_normal', seed=0, test=False, warmup_epoch=10)
-2024-05-22 13:06:25,458 - Model - INFO - Set random seed to 7
-2024-05-22 13:06:25,599 - Model - INFO - The number of training data is: 13998
-2024-05-22 13:06:25,600 - Model - INFO - The number of test data is: 2874
-2024-05-22 13:06:32,509 - Model - INFO - Total params:27.31M, training params:6.03M, 22.08%
-2024-05-22 13:06:32,511 - Model - INFO - Epoch 1 (1/300):

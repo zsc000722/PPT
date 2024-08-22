@@ -192,13 +192,6 @@ class TransformerEncoder(nn.Module):
             if isinstance(m, nn.Linear) and m.bias is not None:
                 nn.init.constant_(m.bias, 0)
     
-    # def forward(self, x, pos):
-    #     for _, block in enumerate(self.blocks):
-    #         x = x + pos
-    #         x[:, 1:self.num_gruop+1] = x[:, 1:self.num_gruop+1] + self.prompt_mlp(x[:, 1:self.num_gruop+1])
-    #         x[:, -self.num_gruop:] = x[:, -self.num_gruop:] + self.prompt_pos_mlp(x[:, -self.num_gruop:])
-    #         x = block(x, self.prompt_all_mlp)
-    #     return x
     def forward(self, x, pos):
         feature_list = []
         fetch_idx = [3, 7, 11]
@@ -209,7 +202,6 @@ class TransformerEncoder(nn.Module):
             x = block(x, self.prompt_all_mlp)
             if i in fetch_idx:
                 feature_list.append(x)
-        #         feature_list.append(x[:, 3:])
         cls = x[:, :3]
         return torch.stack(feature_list), cls
 
@@ -238,11 +230,6 @@ class get_model(nn.Module):
             nn.GELU(),
             nn.Linear(128, self.trans_dim)
         )
-        # self.prompt_pos_embed = nn.Sequential(
-        #     nn.Linear(3, 128),
-        #     nn.GELU(),
-        #     nn.Linear(128, self.embed_dim),
-        # )
 
         dpr = [x.item() for x in torch.linspace(0, self.drop_path_rate, self.depth)]
         self.blocks = TransformerEncoder(
@@ -314,7 +301,6 @@ class get_model(nn.Module):
         group_input_tokens = self.encoder(neighborhood)  # B G N
 
         pos = self.pos_embed(center)
-        # prompt_pos = self.prompt_pos_embed(center)
 
         # final input
         x = torch.cat((group_input_tokens, group_input_tokens), dim=1)
