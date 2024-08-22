@@ -27,37 +27,33 @@ pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointn
 
 We use ScanObjectNN, ModelNet40 and ShapeNetPart in this work. See [DATASET.md](./DATASET.md) for details.
 
-<!-- ## 3. PPT Models
+## 3. PPT Models 
 | Task              | Dataset        | Config                                                                         | Acc.       | Download                                                                                 |      
 |-------------------|----------------|--------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------|
-| Pre-training      | ShapeNet       | N.A.                                                                           | N.A.       | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/pretrain.pth)     |
-| Classification    | ScanObjectNN   | [finetune_scan_hardest.yaml](cfgs/pointmae_configs/finetune_scan_hardest.yaml) | 85.18%     | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/scan_hardest.pth) |
-| Classification    | ScanObjectNN   | [finetune_scan_objbg.yaml](cfgs/pointmae_configs/finetune_scan_objbg.yaml)     | 90.02%     | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/scan_objbg.pth)   |
-| Classification    | ScanObjectNN   | [finetune_scan_objonly.yaml](cfgs/pointmae_configs/finetune_scan_objonly.yaml) | 88.29%     | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/scan_objonly.pth) |
-| Classification    | ModelNet40(1k) | [finetune_modelnet.yaml](cfgs/pointmae_configs/finetune_modelnet.yaml)         | 93.80%     | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/modelnet_1k.pth)  |
-| Classification    | ModelNet40(8k) | [finetune_modelnet_8k.yaml](cfgs/pointmae_configs/finetune_modelnet_8k.yaml)   | 94.04%     | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/modelnet_8k.pth)  |
-| Part segmentation | ShapeNetPart   | [segmentation](./segmentation)                                                 | 86.1% mIoU | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/part_seg.pth)     |
-
-| Task              | Dataset    | Config                                             | 5w10s Acc. (%) | 5w20s Acc. (%) | 10w10s Acc. (%) | 10w20s Acc. (%) |     
-|-------------------|------------|----------------------------------------------------|----------------|----------------|-----------------|-----------------|
-| Few-shot learning | ModelNet40 | [fewshot.yaml](cfgs/pointmae_configs/fewshot.yaml) | 96.3 ± 2.5     | 97.8 ± 1.8     | 92.6 ± 4.1      | 95.0 ± 3.0      | 
+| Pre-training      | ShapeNet       | N.A.                                                                        | N.A.       | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/pretrain.pth)     |
+| Classification    | ScanObjectNN   | [finetune_scan_hardest.yaml](cfgs/pointmae_configs/finetune_scan_hardest.yaml) | 89.00%     | [here](https://drive.google.com/file/d/1-bXMW9Rgpa549dKummLcvibdzxI50SDR/view?usp=share_link) |
+| Classification    | ScanObjectNN   | [finetune_scan_objbg.yaml](cfgs/pointmae_configs/finetune_scan_objbg.yaml)     | 93.63%     | [here](https://drive.google.com/file/d/15YPG0PDtLbKVegpJIClTZpBU9KfL4xIS/view?usp=share_link)   |
+| Classification    | ScanObjectNN   | [finetune_scan_objonly.yaml](cfgs/pointmae_configs/finetune_scan_objonly.yaml) | 92.60%     | [here](https://drive.google.com/file/d/11e3sBZDQBgJLUvOF-TxnIJ2sqT7e-b6E/view?usp=share_link) |
+| Classification    | ModelNet40(1k) | [finetune_modelnet.yaml](cfgs/pointmae_configs/finetune_modelnet.yaml)         | 93.68%     | [here](https://drive.google.com/file/d/1hpKPV4N0ZkQBIkXDSpYkyDZfClHhpgOi/view?usp=share_link)  |
+| Classification    | ModelNet40(8k) | [finetune_modelnet_8k.yaml](cfgs/pointmae_configs/finetune_modelnet_8k.yaml)   | 93.88%     | [here](https://drive.google.com/file/d/1hEFw1Zh3Jkno2od-ez4rPPcbgw-OKNAp/view?usp=share_link)  |
+| Part segmentation | ShapeNetPart   | [segmentation](./segmentation)                                                 | 85.7% mIoU | [here](https://drive.google.com/file/d/1XuTI1nBjBcQnU3D2la628LRiZ2aRZfpX/view?usp=share_link)     |
 
 ## 4. ReCon Models
 | Task              | Dataset        | Config                                                                      | Acc.       | Download                                                                                 |      
 |-------------------|----------------|-----------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------|
-| Pre-training      | ShapeNet       | N.A.                                                                        | N.A.       | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/pretrain.pth)     |
-| Classification    | ScanObjectNN   | [finetune_scan_hardest.yaml](cfgs/recon_configs/finetune_scan_hardest.yaml) | 85.18%     | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/scan_hardest.pth) |
-| Classification    | ScanObjectNN   | [finetune_scan_objbg.yaml](cfgs/recon_configs/finetune_scan_objbg.yaml)     | 90.02%     | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/scan_objbg.pth)   |
-| Classification    | ScanObjectNN   | [finetune_scan_objonly.yaml](cfgs/recon_configs/finetune_scan_objonly.yaml) | 88.29%     | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/scan_objonly.pth) |
-| Classification    | ModelNet40(1k) | [finetune_modelnet.yaml](cfgs/recon_configs/finetune_modelnet.yaml)         | 93.80%     | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/modelnet_1k.pth)  |
-| Classification    | ModelNet40(8k) | [finetune_modelnet_8k.yaml](cfgs/recon_configs/finetune_modelnet_8k.yaml)   | 94.04%     | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/modelnet_8k.pth)  |
-| Part segmentation | ShapeNetPart   | [segmentation](./segmentation)                                              | 86.1% mIoU | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/part_seg.pth)     |
+| Pre-training      | ShapeNet       | N.A.                                                                        | N.A.       | [here](https://drive.google.com/file/d/1L-TlZUi7umBCDpZW-1F0Gf4X-9Wvf_Zo/view?usp=share_link)     |
+| Classification    | ScanObjectNN   | [finetune_scan_hardest.yaml](cfgs/recon_configs/finetune_scan_hardest.yaml) | 89.52%     | [here](https://drive.google.com/file/d/1g_pqJmZBjUBCd-Cw14La1FLZqn-UCRj0/view?usp=share_link) |
+| Classification    | ScanObjectNN   | [finetune_scan_objbg.yaml](cfgs/recon_configs/finetune_scan_objbg.yaml)     | 95.01%     | [here](https://drive.google.com/file/d/1qtc9GMH7Q7vyd6-6_VAJ14jgv-Pfh03x/view?usp=share_link)   |
+| Classification    | ScanObjectNN   | [finetune_scan_objonly.yaml](cfgs/recon_configs/finetune_scan_objonly.yaml) | 93.28%     | [here](https://drive.google.com/file/d/1YM7txyCs8Yf-FWF2-EcJ04Tj6lfVLJRc/view?usp=share_link) |
+| Classification    | ModelNet40(1k) | [finetune_modelnet.yaml](cfgs/recon_configs/finetune_modelnet.yaml)         | 93.76%     | [here](https://drive.google.com/file/d/1WlEFn6k4KC7Ar6kVzyBf9cEwCLfZbjWv/view?usp=share_link)  |
+| Classification    | ModelNet40(8k) | [finetune_modelnet_8k.yaml](cfgs/recon_configs/finetune_modelnet_8k.yaml)   | 93.84%     | [here](https://drive.google.com/file/d/16JUNZ6zcRgsZgcuSI2fIBAUiSKfXzSbv/view?usp=share_link)  |
+| Part segmentation | ShapeNetPart   | [segmentation](./segmentation)                                              | 85.6% mIoU | [here](https://drive.google.com/file/d/1K-xDMG2tqTBSkHnO7PdelctK5HnVm-30/view?usp=share_link)     |
 
 | Task              | Dataset    | Config                                          | 5w10s Acc. (%) | 5w20s Acc. (%) | 10w10s Acc. (%) | 10w20s Acc. (%) |     
 |-------------------|------------|-------------------------------------------------|----------------|----------------|-----------------|-----------------|
-| Few-shot learning | ModelNet40 | [fewshot.yaml](cfgs/recon_configs/fewshot.yaml) | 96.3 ± 2.5     | 97.8 ± 1.8     | 92.6 ± 4.1      | 95.0 ± 3.0      |  -->
+| Few-shot learning | ModelNet40 | [fewshot.yaml](cfgs/recon_configs/fewshot.yaml) | 97.0 ± 2.7     | 98.7 ± 1.6     | 92.2 ± 5.0      | 95.6 ± 2.9      |  -->
 
-## 3. PPT Fine-tuning
+## 5. PPT Fine-tuning
 
 Fine-tuning on ScanObjectNN, run:
 ```
@@ -84,14 +80,6 @@ Part segmentation on ShapeNetPart, run:
 cd segmentation
 python main.py --ckpts <path/to/pre-trained/model> --root path/to/data --learning_rate 0.0002 --epoch 300
 ```
-
-<!-- ## 6. Visualization
-
-Visulization of pre-trained model on ShapeNet validation set, run:
-
-```
-python main_vis.py --test --ckpts <path/to/pre-trained/model> --config cfgs/pretrain.yaml --exp_name <name>
-``` -->
 
 ## Acknowledgements
 
