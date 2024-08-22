@@ -27,7 +27,7 @@ pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointn
 
 We use ScanObjectNN, ModelNet40 and ShapeNetPart in this work. See [DATASET.md](./DATASET.md) for details.
 
-## 3. PPT Models 
+## 3. PPT Models on Point-MAE
 | Task              | Dataset        | Config                                                                         | Acc.       | Download                                                                                 |      
 |-------------------|----------------|--------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------|
 | Pre-training      | ShapeNet       | N.A.                                                                        | N.A.       | [here](https://github.com/Pang-Yatian/Point-MAE/releases/download/main/pretrain.pth)     |
@@ -38,7 +38,7 @@ We use ScanObjectNN, ModelNet40 and ShapeNetPart in this work. See [DATASET.md](
 | Classification    | ModelNet40(8k) | [finetune_modelnet_8k.yaml](cfgs/pointmae_configs/finetune_modelnet_8k.yaml)   | 93.88%     | [here](https://drive.google.com/file/d/1hEFw1Zh3Jkno2od-ez4rPPcbgw-OKNAp/view?usp=share_link)  |
 | Part segmentation | ShapeNetPart   | [segmentation](./segmentation)                                                 | 85.7% mIoU | [here](https://drive.google.com/file/d/1XuTI1nBjBcQnU3D2la628LRiZ2aRZfpX/view?usp=share_link)     |
 
-## 4. ReCon Models
+## 4. PPT Models on ReCon
 | Task              | Dataset        | Config                                                                      | Acc.       | Download                                                                                 |      
 |-------------------|----------------|-----------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------|
 | Pre-training      | ShapeNet       | N.A.                                                                        | N.A.       | [here](https://drive.google.com/file/d/1L-TlZUi7umBCDpZW-1F0Gf4X-9Wvf_Zo/view?usp=share_link)     |
