@@ -5,7 +5,7 @@
 In this work, we rethink the effect of position embedding in Transformer-based point cloud representation learning methods, and present a novel method of Parameter-Efficient Fine-Tuning(PEFT) tasks based on this as well as a new form of prompt and adapter structure. With less than 5% of the trainable parameters, our method, namely PPT, outperforms its PEFT counterparts in classification tasks on ModelNet40 and ScanObjectNN datasets. Our PPT also gets better or on par results in few-shot learning on ModelNet40 and in part segmentation on ShapeNetPart.
 
 <div  align="center">    
- <img src="./figure/pipeline.jpg" width = "666"  align=center />
+ <img src="./figure/pipeline.png" width = "666"  align=center />
 </div>
 
 ## 1. Requirements
