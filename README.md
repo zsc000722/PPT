@@ -1,5 +1,6 @@
 # PPT
-
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/positional-prompt-tuning-for-efficient-3d/3d-parameter-efficient-fine-tuning-for-1)](https://paperswithcode.com/sota/3d-parameter-efficient-fine-tuning-for-1?p=positional-prompt-tuning-for-efficient-3d)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/positional-prompt-tuning-for-efficient-3d/3d-parameter-efficient-fine-tuning-for)](https://paperswithcode.com/sota/3d-parameter-efficient-fine-tuning-for?p=positional-prompt-tuning-for-efficient-3d)
 ## Positional Prompt Tuning for Efficient 3D Representation Learning. [ArXiv](https://arxiv.org/abs/2408.11567)
 
 In this work, we rethink the effect of position embedding in Transformer-based point cloud representation learning methods, and present a novel method of Parameter-Efficient Fine-Tuning(PEFT) tasks based on this as well as a new form of prompt and adapter structure. With less than 5% of the trainable parameters, our method, namely PPT, outperforms its PEFT counterparts in classification tasks on ModelNet40 and ScanObjectNN datasets. Our PPT also gets better or on par results in few-shot learning on ModelNet40 and in part segmentation on ShapeNetPart.
