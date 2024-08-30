@@ -56,24 +56,44 @@ We use ScanObjectNN, ModelNet40 and ShapeNetPart in this work. See [DATASET.md](
 
 ## 5. PPT Fine-tuning
 
-Fine-tuning on ScanObjectNN, run:
+Fine-tuning Point-MAE on ScanObjectNN, run:
 ```
-CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config cfgs/finetune_scan_hardest.yaml \
+CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config cfgs/pointmae_configs/finetune_scan_hardest.yaml \
 --finetune_model --exp_name <output_file_name> --ckpts <path/to/pre-trained/model>
 ```
-Fine-tuning on ModelNet40, run:
+Fine-tuning Point-MAE on ModelNet40, run:
 ```
-CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config cfgs/finetune_modelnet.yaml \
+CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config cfgs/pointmae_configs/finetune_modelnet.yaml \
 --finetune_model --exp_name <output_file_name> --ckpts <path/to/pre-trained/model>
 ```
-Voting on ModelNet40, run:
+Voting Point-MAE on ModelNet40, run:
 ```
-CUDA_VISIBLE_DEVICES=<GPUs> python main.py --test --config cfgs/finetune_modelnet.yaml \
+CUDA_VISIBLE_DEVICES=<GPUs> python main.py --test --config cfgs/pointmae_configs/finetune_modelnet.yaml \
 --exp_name <output_file_name> --ckpts <path/to/best/fine-tuned/model>
 ```
-Few-shot learning, run:
+Few-shot learning of Point-MAE, run:
 ```
-CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config cfgs/fewshot.yaml --finetune_model \
+CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config cfgs/pointmae_configs/fewshot.yaml --finetune_model \
+--ckpts <path/to/pre-trained/model> --exp_name <output_file_name> --way <5 or 10> --shot <10 or 20> --fold <0-9>
+```
+Fine-tuning ReCon on ScanObjectNN, run:
+```
+CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config cfgs/recon_configs/finetune_scan_hardest.yaml \
+--finetune_model --exp_name <output_file_name> --ckpts <path/to/pre-trained/model>
+```
+Fine-tuning ReCon on ModelNet40, run:
+```
+CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config cfgs/recon_configs/finetune_modelnet.yaml \
+--finetune_model --exp_name <output_file_name> --ckpts <path/to/pre-trained/model>
+```
+Voting ReCon on ModelNet40, run:
+```
+CUDA_VISIBLE_DEVICES=<GPUs> python main.py --test --config cfgs/recon_configs/finetune_modelnet.yaml \
+--exp_name <output_file_name> --ckpts <path/to/best/fine-tuned/model>
+```
+Few-shot learning of ReCon, run:
+```
+CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config cfgs/recon_configs/fewshot.yaml --finetune_model \
 --ckpts <path/to/pre-trained/model> --exp_name <output_file_name> --way <5 or 10> --shot <10 or 20> --fold <0-9>
 ```
 Part segmentation on ShapeNetPart, run:
@@ -84,7 +104,7 @@ python main.py --ckpts <path/to/pre-trained/model> --root path/to/data --learnin
 
 ## Acknowledgements
 
-Our codes are built upon [Point-MAE](https://github.com/Pang-Yatian/Point-MAE) and [ICCV23-IDPT](https://github.com/zyh16143998882/ICCV23-IDPT?tab=readme-ov-file)
+Our codes are built upon [Point-MAE](https://github.com/Pang-Yatian/Point-MAE), [ReCon](https://github.com/qizekun/ReCon), [ICCV23-IDPT](https://github.com/zyh16143998882/ICCV23-IDPT?tab=readme-ov-file) and [DAPT](https://github.com/LMD0311/DAPT)
 
 ## Reference
 
