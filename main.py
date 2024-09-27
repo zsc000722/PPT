@@ -1,6 +1,5 @@
 from tools import finetune_run_net as finetune
 from tools import test_run_net as test_net
-from tools.runner_finetune import test_tsne
 from utils import parser, dist_utils, misc
 from utils.logger import *
 from utils.config import *
@@ -79,8 +78,6 @@ def main():
     # run
     if args.test:
         test_net(args, config)
-    elif args.tsne:
-        test_tsne(args, config)
     else:
         finetune(args, config, train_writer, val_writer)
 
